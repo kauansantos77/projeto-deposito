@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa - Depósito</title>
+
+    <link rel="stylesheet" href="estilizacao.css">
+</head>
+<body>
+
+    <main class="container">
+
+        <header>
+            <h1>🛒 Caixa do Depósito</h1>
+            <p>Registre os produtos da compra</p>
+        </header>
+
+        <section class="formulario">
+
+            <div class="campo">
+                <label for="produto">Produto</label>
+                <input
+                    type="text"
+                    id="produto"
+                    placeholder="Ex: Cimento"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="quantidade">Quantidade</label>
+                <input
+                    type="number"
+                    id="quantidade"
+                    min="1"
+                    value="1"
+                >
+            </div>
+
+            <div class="campo">
+                <label for="preco">Preço unitário</label>
+                <input
+                    type="number"
+                    id="preco"
+                    min="0"
+                    step="0.01"
+                    placeholder="0,00"
+                >
+            </div>
+
+            <button id="btnAdicionar" class="btn-adicionar">
+                + Adicionar
+            </button>
+
+        </section>
+
+        <section class="nota">
+
+            <div class="nota-header">
+                <h2>📝 Conta do Cliente</h2>
+                <span id="contador">0 itens</span>
+            </div>
+
+            <div id="listaItens" class="lista-itens">
+                <p class="vazio">
+                    Nenhum item adicionado.
+                </p>
+            </div>
+
+            <div class="total">
+                <span>Total</span>
+                <strong id="total">R$ 0,00</strong>
+            </div>
+
+        </section>
+
+        <section class="acoes">
+            <button id="btnFechar" class="btn-fechar">
+                ✓ Fechar Caixa
+            </button>
+
+            <button id="btnLimpar" class="btn-limpar">
+                Limpar Conta
+            </button>
+        </section>
+
+    </main>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-conteudo">
+
+            <button id="btnFecharModal" class="fechar-modal">
+                ×
+            </button>
+
+            <h2>💰 Caixa Fechado</h2>
+
+            <p>Total da compra:</p>
+
+            <strong id="totalFinal">
+                R$ 0,00
+            </strong>
+
+            <button id="btnNovaConta" class="btn-nova-conta">
+                Nova Conta
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
