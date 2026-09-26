@@ -5,6 +5,8 @@ let itens = [];
 const produtoInput = document.getElementById("produto");
 const quantidadeInput = document.getElementById("quantidade");
 const precoInput = document.getElementById("preco");
+const btnVoltar = document.getElementById("btnVoltar");
+
 
 const btnAdicionar = document.getElementById("btnAdicionar");
 const btnFechar = document.getElementById("btnFechar");
@@ -19,6 +21,12 @@ const totalFinal = document.getElementById("totalFinal");
 
 const btnFecharModal = document.getElementById("btnFecharModal");
 const btnNovaConta = document.getElementById("btnNovaConta");
+
+//VOLTAR BOTÃO
+
+btnVoltar.addEventListener("click", function() {
+    window.history.back();
+});
 
 
 // ADICIONAR ITEM
