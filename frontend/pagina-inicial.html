@@ -1,26 +1,187 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WA construções</title>
-    <link rel="stylesheet" href="pagina-inicial.css">
-</head>
-<body>
-    <main class="container">
-        <header>
-            <h1>
-                WA construções
-            </h1>
-        </header>
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+<head> 
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>WA Construções</title> 
+  <link rel="stylesheet" href="style.css"> 
+</head> 
 
-        <button class="bt-compra">
+<body> 
 
-        <a href="page.html">ir para a compra</a>
+<header class="topbar">
+  <span>📍 Fortaleza - CE</span>
+  <span>🚚 Entregamos em toda a região</span>
+  <span>☎ (85) 98765-4321</span>
+</header> 
 
-        </button>
-        
+<nav class="nav"> 
 
-    </main>
-</body>
+  <div class="logo">
+    <span>⌂</span> WA <small>CONSTRUÇÕES</small>
+  </div> 
+
+  <div class="search">
+    <input id="search" placeholder="O que você está procurando?">
+    <button onclick="buscar()">⌕</button>
+  </div> 
+
+  <div class="nav-actions">
+    <a href="pedido-venda.html" class="btn-pedido">📝 Anotar pedido</a>
+  </div>
+   
+</nav> 
+
+<div class="menu"> 
+  <button class="categories">☰ &nbsp; TODAS AS CATEGORIAS</button> 
+  <a class="active">Início</a>
+  <a>Materiais Básicos</a>
+  <a>Elétrica</a>
+  <a>Hidráulica</a>
+  <a>Ferramentas</a>
+  <a>Acabamento</a>
+  <a>Promoções</a> 
+</div> 
+ 
+<section class="hero"> 
+  <div class="hero-text"> 
+    <span>TUDO PARA SUA OBRA</span> 
+    <h1>WA CONSTRUÇÕES<br><strong>QUALIDADE E ECONOMIA</strong></h1> 
+    <p>
+      Aqui você encontra os melhores materiais de construção para todos os tipos de obra, 
+      do pequeno reparo ao grande projeto.
+    </p> 
+    <button onclick="rolar('produtos')">Ver ofertas →</button> 
+  </div> 
+</section> 
+ 
+<section class="section"> 
+  <h2>Nossas Categorias</h2>
+  <p>Encontre tudo o que você precisa em um só lugar.</p> 
+
+  <div class="categories-grid"> 
+    <article>🧱<b>Materiais Básicos</b>→</article>
+    <article>🔌<b>Elétrica</b>→</article> 
+    <article>🔧<b>Hidráulica</b>→</article>
+    <article>🛠️<b>Ferramentas</b>→</article> 
+    <article>▧<b>Acabamento</b>→</article>
+    <article>🎨<b>Tintas</b>→</article> 
+  </div> 
+</section> 
+ 
+<section class="benefits"> 
+  <div>
+    🚚 <b>Entrega Rápida</b>
+    <small>Com agilidade e segurança até você.</small>
+  </div> 
+
+  <div>
+    🛡️ <b>Produtos de Qualidade</b>
+    <small>Das melhores marcas do mercado.</small>
+  </div> 
+
+  <div>
+    🏷️ <b>Melhores Preços</b>
+    <small>Economia para sua obra ou reforma.</small>
+  </div> 
+
+  <div>
+    🎧 <b>Atendimento Especializado</b>
+    <small>Tire suas dúvidas com nossa equipe.</small>
+  </div> 
+</section> 
+ 
+<section class="section" id="produtos"> 
+
+  <div class="section-title">
+    <div>
+      <h2>Produtos em Destaque</h2>
+      <p>Confira alguns dos nossos produtos mais vendidos.</p>
+    </div>
+
+    <a>Ver todos →</a>
+  </div> 
+
+  <div class="products"> 
+
+    <div class="product">
+      <div class="product-img">🧱</div>
+      <h3>Cimento CP II 50kg</h3>
+      <strong>R$ 32,90</strong>
+      <button onclick="addCart()">Adicionar ao carrinho</button>
+    </div> 
+
+    <div class="product">
+      <div class="product-img">🧱</div>
+      <h3>Tijolo Cerâmico 6 Furos</h3>
+      <strong>R$ 1,20</strong>
+      <button onclick="addCart()">Adicionar ao carrinho</button>
+    </div> 
+
+    <div class="product">
+      <div class="product-img">〰️</div>
+      <h3>Cabo Elétrico 2,5mm</h3>
+      <strong>R$ 3,50</strong>
+      <button onclick="addCart()">Adicionar ao carrinho</button>
+    </div> 
+
+    <div class="product">
+      <div class="product-img">🎨</div>
+      <h3>Tinta Acrílica 18L</h3>
+      <strong>R$ 189,90</strong>
+      <button onclick="addCart()">Adicionar ao carrinho</button>
+    </div> 
+
+    <div class="product">
+      <div class="product-img">🛠️</div>
+      <h3>Furadeira 500W</h3>
+      <strong>R$ 219,90</strong>
+      <button onclick="addCart()">Adicionar ao carrinho</button>
+    </div> 
+
+    <div class="product">
+      <div class="product-img">🚰</div>
+      <h3>Torneira de Cozinha</h3>
+      <strong>R$ 49,90</strong>
+      <button onclick="addCart()">Adicionar ao carrinho</button>
+    </div> 
+
+  </div> 
+</section> 
+ 
+<footer>
+
+  <div class="footer-logo">
+    ⌂ WA<br>
+    <small>CONSTRUÇÕES</small>
+  </div>
+
+  <div>
+    <b>Institucional</b>
+    <p>
+      Sobre nós<br>
+      Política de privacidade<br>
+      Termos de uso
+    </p>
+  </div>
+
+  <div>
+    <b>Atendimento</b>
+    <p>
+      (85) 98765-4321<br>
+      contato@waconstrucoes.com.br<br>
+      Segunda a Sábado - 7h às 18h
+    </p>
+  </div>
+
+  <div>
+    <b>Formas de pagamento</b>
+    <p>VISA &nbsp; Mastercard &nbsp; elo &nbsp; PIX</p>
+  </div>
+
+</footer> 
+
+<script src="script.js"></script> 
+
+</body> 
 </html>
